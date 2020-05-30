@@ -1,5 +1,5 @@
 {
-  "name": "Node.js app",
+  "name": "portfolio app",
   "dockerComposeFile": "docker-compose.yml",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash",
@@ -12,5 +12,5 @@
   "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
 
   // Specifies a command that should be run after the container has been created.
-  "postCreateCommand": "yarn install"
+  "postCreateCommand": "/bin/bash /app/.devcontainer/server/setup.sh"
 }
