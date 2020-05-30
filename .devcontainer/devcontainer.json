@@ -1,0 +1,16 @@
+{
+  "name": "Node.js app",
+  "dockerComposeFile": "docker-compose.yml",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.formatOnSave": true
+  },
+  "service": "server",
+  "workspaceFolder": "/app",
+
+  // Add the IDs of extensions you want installed when the container is created in the array below.
+  "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+
+  // Specifies a command that should be run after the container has been created.
+  "postCreateCommand": "yarn install"
+}
