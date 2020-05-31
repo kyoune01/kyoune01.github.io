@@ -55,7 +55,7 @@ const Index = () => (
     <section style={{ marginBottom: `4rem` }}>
       <h2>本サイトの使用技術</h2>
       <p>
-        <span>Github_Rep：</span>
+        <span>リポジトリ : </span>
         <a
           href="https://github.com/kyoune01/portfolio-gatsby"
           target="_blank"
@@ -64,8 +64,7 @@ const Index = () => (
           portfolio-gatsby
         </a>
         <br />
-        言語：react <br />
-        ツール・FW：gatsby, jest, eslint <br />
+        言語 / ツール：react, gatsby <br />
         構築環境：.devcontenier (vscode, docker)
       </p>
     </section>
