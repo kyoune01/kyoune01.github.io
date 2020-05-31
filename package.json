@@ -36,11 +36,11 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest",
+    "test": "jest --runInBand",
     "check": "yarn run format && yarn run eslint . && yarn run test",
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
