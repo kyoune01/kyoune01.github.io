@@ -1,0 +1,51 @@
+import React from "react"
+import { graphql } from "gatsby"
+import PropTypes from "prop-types"
+
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+const Template = ({ data }) => {
+  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { frontmatter, html } = markdownRemark
+  return (
+    <Layout>
+      <SEO title={frontmatter.title} />
+      <div className="reading-post-container">
+        <div className="reading-post">
+          <h1>{frontmatter.title}</h1>
+          <div
+            className="reading-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
+      </div>
+    </Layout>
+  )
+}
+
+Template.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string,
+        date: PropTypes.string,
+      }),
+      html: PropTypes.string,
+    }),
+  }),
+}
+
+export default Template
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        date
+        title
+      }
+    }
+  }
+`

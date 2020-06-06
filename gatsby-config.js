@@ -32,3 +32,30 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+// You can have multiple instances of this plugin
+// to read source nodes from different locations on your
+// filesystem.
+//
+// The following sets up the Jekyll pattern of having a
+// "pages" directory for Markdown files and a "data" directory
+// for `.json`, `.yaml`, `.csv`.
+const fs = require("fs")
+const root = `${__dirname}/content/TIL/`
+const files = fs.readdirSync(root)
+// 第3階層までは見ないのでパス取得
+files.forEach(file => {
+  const stats = fs.statSync(`${root}${file}`)
+  if (stats.isDirectory()) {
+    module.exports.plugins.unshift({
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `${file}`,
+        path: `${root}${file}`,
+        ignore: ["README.md"],
+      },
+    })
+  }
+})
+// path追加後に追記
+module.exports.plugins.unshift(`gatsby-transformer-remark`)

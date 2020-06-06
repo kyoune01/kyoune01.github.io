@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Nav from "./nav"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -33,8 +34,11 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        <Nav />
         <main>{children}</main>
-        <footer>© {new Date().getFullYear()}, kyoune01</footer>
+        <footer style={{ marginTop: "1rem" }}>
+          © {new Date().getFullYear()}, kyoune01
+        </footer>
       </div>
     </>
   )

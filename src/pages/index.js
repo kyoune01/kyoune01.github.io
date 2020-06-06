@@ -5,14 +5,14 @@ import SEO from "../components/seo"
 
 const Index = () => (
   <Layout>
-    <SEO title="top" />
-    <section style={{ marginBottom: `4rem` }}>
+    <SEO />
+    <section>
       <p>
         簡単に自己紹介するためのページです。Github
         Pagesが気になったので作ってみました。
       </p>
     </section>
-    <section style={{ marginBottom: `4rem` }}>
+    <section style={{ marginTop: `4rem` }}>
       <h2>自己紹介</h2>
       <p>高専生でした。 現在はWEB制作会社で働いています。</p>
       <p>担当業務は下記</p>
@@ -28,7 +28,7 @@ const Index = () => (
         docker, docker-compose, python
       </p>
     </section>
-    <section style={{ marginBottom: `4rem` }}>
+    <section style={{ marginTop: `4rem` }}>
       <h2>Contact</h2>
       <p>連絡・制作物は下記</p>
       <ul>
@@ -52,7 +52,7 @@ const Index = () => (
         </li>
       </ul>
     </section>
-    <section style={{ marginBottom: `4rem` }}>
+    <section style={{ marginTop: `4rem` }}>
       <h2>本サイトの使用技術</h2>
       <p>
         <span>リポジトリ : </span>
