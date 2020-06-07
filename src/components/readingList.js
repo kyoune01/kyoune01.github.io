@@ -16,7 +16,7 @@ const ReadingList = () => {
             frontmatter {
               title
               slug
-              date(formatString: "DD MMMM, YYYY")
+              date
             }
           }
         }
