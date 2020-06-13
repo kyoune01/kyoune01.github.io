@@ -57,11 +57,11 @@ const Index = () => (
       <p>
         <span>リポジトリ : </span>
         <a
-          href="https://github.com/kyoune01/portfolio-gatsby"
+          href="https://github.com/kyoune01/kyoune01.github.io"
           target="_blank"
           rel="noreferrer"
         >
-          portfolio-gatsby
+          kyoune01.github.io
         </a>
         <br />
         言語 / ツール：react, gatsby <br />

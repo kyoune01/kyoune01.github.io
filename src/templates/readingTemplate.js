@@ -13,7 +13,7 @@ const Template = ({ data }) => {
       <SEO title={frontmatter.title} />
       <div className="reading-post-container">
         <div className="reading-post">
-          <h1>{frontmatter.title}</h1>
+          <h1 style={{ marginBottom: "2rem" }}>{frontmatter.title}</h1>
           <div
             className="reading-post-content"
             dangerouslySetInnerHTML={{ __html: html }}

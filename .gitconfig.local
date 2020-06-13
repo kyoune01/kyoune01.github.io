@@ -1,8 +1,0 @@
-[core]
-	autocrlf = false
-[remote "resource"]
-	url = https://github.com/kyoune01/portfolio-gatsby.git
-	fetch = +refs/heads/*:refs/remotes/resource/*
-[remote "origin"]
-	url = https://github.com/kyoune01/kyoune01.github.io.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
