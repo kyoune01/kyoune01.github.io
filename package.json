@@ -29,7 +29,7 @@
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
-    "lint-staged": "^10.2.10",
+    "lint-staged": "^10.2.11",
     "prettier": "2.0.5",
     "react-test-renderer": "^16.13.1"
   },
@@ -44,8 +44,21 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest --runInBand",
-    "check": "yarn run format && yarn run eslint . && yarn run test",
+    "check": "yarn run eslint . && yarn run test",
     "deploy": "gatsby build && gh-pages -d public -b master"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run check"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "yarn run format",
+        "yarn run check"
+      ]
+    }
   },
   "repository": {
     "type": "git",

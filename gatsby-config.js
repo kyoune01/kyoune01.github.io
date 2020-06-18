@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `kyoune01.github.io`,
         short_name: `kyoune's portfolio`,
         start_url: `/`,
         background_color: `#F8FDF7`,

@@ -19,6 +19,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Check
+        run: yarn run check
+
       - name: Run build for GitHub Pages
         run: yarn build
 

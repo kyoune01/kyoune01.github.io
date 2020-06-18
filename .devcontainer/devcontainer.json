@@ -9,7 +9,11 @@
   "workspaceFolder": "/app",
 
   // Add the IDs of extensions you want installed when the container is created in the array below.
-  "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+  "extensions": [
+	"dbaeumer.vscode-eslint",
+	"esbenp.prettier-vscode",
+	"donjayamanne.githistory"
+],
 
   // Specifies a command that should be run after the container has been created.
   "postCreateCommand": "/bin/bash /app/.devcontainer/server/setup.sh"
