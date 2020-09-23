@@ -20,4 +20,7 @@ ENV PATH $PATH:/app/node_modules/.bin
 ENV LANG ja_JP.UTF-8
 ENV TZ Asia/Tokyo
 
+COPY ./package.json package.json
+RUN yarn install
+
 ENTRYPOINT /bin/bash
