@@ -23,7 +23,7 @@ const Index: React.FC<void> = () => (
       <p>
         経験のある言語・技術：
         <br />
-        html5, css, javascript (es5), php (^5), mvc-FW (cakephp, Laravel),
+        html5, css, javascript (es6), php (^7), mvc-FW (cakephp, Laravel),
         docker, docker-compose, python
       </p>
     </section>
@@ -63,7 +63,7 @@ const Index: React.FC<void> = () => (
           kyoune01.github.io
         </a>
         <br />
-        言語 / ツール：react, gatsby <br />
+        言語 / ツール：gatsby (React + TypeScript) <br />
         構築環境：.devcontenier (vscode, docker)
       </p>
     </section>
@@ -72,6 +72,6 @@ const Index: React.FC<void> = () => (
 
 export default Index
 
-export const Head = () => (
+export const Head: React.FC<void> = () => (
   <SEO />
 )
