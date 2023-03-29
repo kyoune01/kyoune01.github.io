@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 
 const Index = () => (
   <Layout>
-    <SEO />
     <section>
       <p>
         簡単に自己紹介するためのページです。Github
@@ -72,3 +71,7 @@ const Index = () => (
 )
 
 export default Index
+
+export const Head = () => (
+  <SEO />
+)

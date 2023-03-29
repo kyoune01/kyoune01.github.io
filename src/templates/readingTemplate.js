@@ -10,7 +10,6 @@ const Template = ({ data }) => {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
       <div className="reading-post-container">
         <div className="reading-post">
           <h1 style={{ marginBottom: "2rem" }}>{frontmatter.title}</h1>
@@ -37,6 +36,22 @@ Template.propTypes = {
 }
 
 export default Template
+
+export const Head = ({ data }) => (
+  <SEO title={data.markdownRemark.frontmatter.title} />
+)
+
+Head.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string,
+        date: PropTypes.string,
+      }),
+      html: PropTypes.string,
+    }),
+  }),
+}
 
 export const query = graphql`
   query($slug: String!) {

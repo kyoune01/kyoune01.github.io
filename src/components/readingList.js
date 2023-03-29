@@ -5,10 +5,7 @@ import PropTypes from "prop-types"
 const ReadingList = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
         totalCount
         edges {
           node {

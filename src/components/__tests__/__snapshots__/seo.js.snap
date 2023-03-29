@@ -1,3 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SEO renders correctly 1`] = `null`;
+exports[`SEO renders correctly 1`] = `
+[
+  <title>
+    Home | My Title
+  </title>,
+  <meta
+    content="My description"
+    name="description"
+  />,
+  <meta
+    content="Home | My Title"
+    property="og:title"
+  />,
+  <meta
+    content="My description"
+    property="og:description"
+  />,
+  <meta
+    content="website"
+    property="og:type"
+  />,
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />,
+  <meta
+    content="Florian"
+    name="twitter:creator"
+  />,
+  <meta
+    content="Home | My Title"
+    name="twitter:title"
+  />,
+  <meta
+    content="My description"
+    name="twitter:description"
+  />,
+]
+`;

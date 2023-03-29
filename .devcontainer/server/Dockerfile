@@ -11,7 +11,7 @@ RUN apt-get update \
     # install nodejs yarn
     && apt-get install --no-install-recommends -y nodejs npm \
     && npm install -g n yarn \
-    && n 12.17 \
+    && n 18.15 \
     && apt-get purge -y nodejs npm \
     # clean cache
     && apt-get autoremove -y && apt-get clean && rm -rf /var/lib/opt/lists/*

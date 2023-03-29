@@ -32,7 +32,6 @@ const Reading = () => {
 
   return (
     <Layout>
-      <SEO title="reading" />
       <h1>{content.h1}</h1>
       <p>
         {content.description} <br />
@@ -61,3 +60,7 @@ Reading.propTypes = {
 }
 
 export default Reading
+
+export const Head = () => (
+  <SEO title="reading" />
+)
