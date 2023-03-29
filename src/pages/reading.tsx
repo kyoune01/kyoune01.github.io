@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import PropTypes from "prop-types"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,7 +17,7 @@ const AllowCount = {
   list: <ReadingList />,
 }
 
-const Reading = () => {
+const Reading: React.FC<void> = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
@@ -47,16 +46,6 @@ const Reading = () => {
       {content.list}
     </Layout>
   )
-}
-
-Reading.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      totalCount: PropTypes.number,
-    }),
-  }),
-  IsCount: PropTypes.bool,
-  content: PropTypes.object,
 }
 
 export default Reading
