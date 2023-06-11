@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "",
   "dependencies": {
-    "gatsby": "^5.8.0",
+    "gatsby": "^5.9.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-google-analytics": "^5.8.0",
     "gatsby-plugin-graphql-codegen": "^3.1.1",
