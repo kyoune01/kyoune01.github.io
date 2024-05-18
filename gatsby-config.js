@@ -79,9 +79,9 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,
     {
-      resolve: 'gatsby-plugin-graphql-codegen',
+      resolve: 'gatsby-plugin-typegen',
       options: {
-        fileName: `types/graphql-types.d.ts`
+        outputPath: `types/graphql-types.d.ts`
       }
     },
   ],

@@ -8,10 +8,10 @@
     "gatsby": "^5.9.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-google-analytics": "^5.8.0",
-    "gatsby-plugin-graphql-codegen": "^3.1.1",
     "gatsby-plugin-manifest": "^5.8.0",
-    "gatsby-plugin-offline": "^6.8.0",
+    "gatsby-plugin-offline": "^6.13.2",
     "gatsby-plugin-sharp": "^5.8.1",
+    "gatsby-plugin-typegen": "^3.1.0",
     "gatsby-source-filesystem": "^5.8.0",
     "gatsby-transformer-remark": "^6.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
@@ -24,7 +24,7 @@
   "devDependencies": {
     "babel-jest": "^29.5.0",
     "babel-preset-gatsby": "^3.8.0",
-    "eslint": "^7.32.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-app": "^6.2.2",
     "gh-pages": "^5.0.0",
@@ -41,14 +41,14 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "jest --runInBand",
-    "check": "yarn run eslint . && yarn run test",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "build": "npx gatsby build",
+    "dev": "npx gatsby develop",
+    "format": "npx prettier --write \"**/*.{js,jsx,json,md}\"",
+    "serve": "npx gatsby serve",
+    "clean": "npx gatsby clean",
+    "test": "npx jest --runInBand",
+    "check": "npx eslint . && npm run test",
+    "deploy": "npx gatsby build && npx gh-pages -d public -b master"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -65,5 +65,9 @@
   },
   "bugs": {
     "url": "https://github.com/kyoune01/kyoune01.github.io/issues"
+  },
+  "volta": {
+    "node": "20.13.1",
+    "npm": "10.8.0"
   }
 }
